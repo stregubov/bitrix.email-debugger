@@ -7,7 +7,7 @@ IncludeModuleLangFile($_SERVER["DOCUMENT_ROOT"] . BX_ROOT . "/modules/main/inter
 global $APPLICATION;
 $APPLICATION->SetTitle('Дебагер почтовых сообщений');
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_admin_after.php");
-require $_SERVER["DOCUMENT_ROOT"] . "/local/modules/korus.asklegal/tools/Email.php";
+require $_SERVER["DOCUMENT_ROOT"] . "/local/Email.php";
 
 
 if ($_GET["ID"]) {
@@ -70,7 +70,7 @@ foreach ($res as $item) {
     $id = $item['ID'];
 
     $link = $APPLICATION->GetPopupLink(array(
-            "URL" => "/bitrix/admin/korus_asklegal_email.php?ID=$id",
+            "URL" => "/bitrix/admin/email_debugger_admin_page.php?ID=$id",
             "PARAMS" => array(
                 "width" => 780,
                 "height" => 570,
